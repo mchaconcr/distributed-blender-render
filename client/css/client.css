@@ -1,0 +1,130 @@
+*{
+	margin: 0; padding: 0; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #232323; color: #E6E6E6;
+	font-family: 'Helvetica-Neue','Helvetica Neue','Helvetica', 'Arial', sans-serif;
+	padding: 12px; font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;	
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+button{
+	background-color: #557fc1; 
+	border: none; border-radius: 4px; padding: 0 6px; color: #FFF;-webkit-appearance: none;outline: none;
+	min-width: 25px; min-height: 25px;
+	line-height: 25px;
+}
+
+button:disabled{
+	opacity: 0.25;
+}
+.matIc{
+	font-size: 0;
+}
+.matIc button{
+	width:22px;height: 22px;padding: 0; text-align: center; margin-right: 3px; margin-bottom: 3px; display: inline-block; vertical-align: middle;
+}
+.matIc button .material-icons{
+	font-size: 26px; line-height: 22px;
+}
+
+
+
+input,select{
+	background-color: #1d1d1d; color: white; border: none; -webkit-appearance: none; line-height: 22px; padding: 0 6px; border-radius: 4px;outline: none;
+}
+input.error{
+	background-color: #771111;
+}
+
+
+
+.panel{
+	background-color: #424242; border-radius: 6px; background-color: #383838; overflow: hidden;
+	padding: 0 6px 6px; margin: 6px 0; line-height: 22px;
+}
+.panel>h3{
+	background-color: #424242; font-size: 14px; font-weight: bold; padding: 3px 6px; margin: 0 -6px 6px;
+}
+
+.led{display: inline; margin-right: 6px;}
+.led:before{
+	content: "";
+	display: inline-block; width:10px; height: 10px; background-color: #DDD; border-radius: 50%;
+	vertical-align:baseline;
+}
+.led.on:before{background-color: green;}
+.led.connecting:before{background-color: yellow;}
+.led.error:before{background-color: red;}
+
+
+.fillSet{
+	width:100%; border: 0; min-width: 600px;
+}
+.fillSet td{
+	 padding: 3px 4px;
+}
+
+
+table{width: 100%;}
+
+
+#mainServer:empty:before{content: "No server in use"}
+
+
+/* /// */
+
+
+#blenderPath:empty:before{
+	content: "No Blender.app path configured. please change fix to start rendering";
+	color: #666; font-weight: 200;
+}
+
+h3>button{
+    height: 18px;
+	min-height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-right: 6px;
+}
+h3>button>i.material-icons{
+	font-size: 16px; line-height: 18px;
+}
+
+#serverPick{
+	position: absolute;
+    top: 140px;
+    left: 49px;
+    background-color: #424242;
+    border-radius: 8px;
+    display: none;
+    overflow: hidden;
+}
+#serverPick.isOn{
+	display:block;
+}
+
+#serverPick>h3{
+	background-color: #333; padding: 3px 6px;
+}
+#serverPick button{
+	margin: 3px 6px;
+}
+#serverPick div{
+	padding: 3px 6px;
+}
+
+#serverPick div#autoServer{
+	max-height: 100px; overflow: auto;
+}
+
+#donate,#git{
+	color: yellow; margin: auto; display: inline-block; margin-right: 12px; text-decoration: underline; cursor: pointer;
+}

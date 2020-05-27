@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<script>window.$ = window.jQuery = require('jquery');</script>
+	<link href="css/material-icons.css" rel="stylesheet">	
+    <title>Server</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/server.css"/>
+  </head>
+  <body>
+
+	  <div class="panel">
+		  <h3><div id="serviceLed" class='led off'></div> Service [<b class='hostName'></b>]</h3>
+		  <label for="port">Port:</label> <input id="port" type="number" min="1024" max="65536" step="1" value=""/>
+		  <button id='startStopService' disabled="">Starting</button>
+	  </div>
+	  <div class="panel">
+		  	<h3>Connected Clients</h3>
+		  	<div id="clients"></div>
+	  </div>
+
+	  <div class="panel">
+		  <h3><button id='cmdAddTask'></button> Render Tasks</h3>
+		  <table id='rTasks' cellpadding="0" cellspacing="0">
+			  <thead>
+				  <td>Order</td>
+				  <td>Blend</td>
+				  <td>Folder</td>
+				  <td>From</td>
+				  <td>To</td>
+				  <td>Completed</td>
+				  <td></td>
+			  </thead>
+			  <tbody id="taskList"></tbody>
+		  </table>
+	  </div>
+	  <div class="panel">
+		  <h3>Current Task</h3>
+		  <h4 id='lastNum'>Last Image:</h4>
+		  <img id="lastImage">
+	  </div>
+	  
+	  
+	  <div id="createTask" >
+		  <div>
+			<h3>Create Task <button id="notCreate" onclick="$('#createTask').removeClass('addC')">X</button></h3>
+			<table class='fillSet' cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="width:140px; text-align: right;">Blender File</td>
+					<td style="width:110px; text-align: center;"><button id="addFileTask" style="width: 90px">...</button></td>
+					<td id="blenderFile"></td>
+				</tr>
+				<tr>
+					<td style="width:140px; text-align: right;">Render Folder</td>
+					<td style="width:110px; text-align: center;"><button id="addFolderTask" style="width: 90px">...</button></td>
+					<td id="blenderFolder"></td>
+				</tr>
+				<tr>
+					<td style="width:140px; text-align: right;">From frame</td>
+					<td style="width:110px; text-align: center;"><input id="fromTask" type="number" min="0" max="10000" step="1" value="1" style="width: 90px"/></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="width:140px; text-align: right;">To frame</td>
+					<td style="width:110px; text-align: center;"><input id="toTask" type="number" min="0" max="10000" step="1" value="300" style="width: 90px"/></td>
+					<td></td>
+				</tr>
+			</table>
+			<button id="addTask" disabled="" style="width: 100%; padding: 6px;">Add Render Task</button>
+		  </div>
+	  </div>	  
+
+<div id="git">Github</div>
+<div id="donate">Donate</div>
+	  
+	  <script src="js/server-cli.js"></script>
+
+    
+  </body>
+</html>

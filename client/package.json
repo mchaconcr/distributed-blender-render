@@ -1,0 +1,43 @@
+{
+  "name": "distributed-blender-render-client",
+  "version": "1.0.0",
+  "description": "Use several machines on the same network to render blender animations",
+  "main": "client.js",
+  "scripts": {
+    "start": "ELECTRON_ENV=development electron .",
+    "build": "electron-packager . client --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=../bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchaconcnn/distributed-blender-render.git"
+  },
+  "keywords": [
+    "blender",
+    "3d",
+    "network",
+    "render",
+    "farm"
+  ],
+  "author": "Marco Chacón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mchaconcnn/distributed-blender-render/issues"
+  },
+  "homepage": "https://github.com/mchaconcnn/distributed-blender-render#readme",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-packager": "^14.2.1",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "buffer-chunks": "^0.1.1",
+    "electron-json-config": "^1.5.3",
+    "fs-extra": "^9.0.0",
+    "http": "0.0.1-security",
+    "jquery": "^3.5.1",
+    "os": "^0.1.1",
+    "shelljs": "^0.8.4",
+    "udp-discovery": "^2.0.0",
+    "websocket": "^1.0.31"
+  }
+}

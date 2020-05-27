@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<script>window.$ = window.jQuery = require('jquery');</script>
+	<link href="css/material-icons.css" rel="stylesheet">	
+    <title>Client</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/client.css"/>
+
+  </head>
+  <body>
+	  <div class="panel">
+		  <h3>Status</h3>
+		  <div id="status"></div>
+	  </div>
+	  <div class="panel">
+		  <h3 id='blenderAppHeader'>Blender.app Path:</h3>
+		  <b id="blenderPath"></b>
+		  <button id="changeBlenderPath">Change</button>
+		  
+	  </div>
+	  <div class="panel">
+		  <h3><button id='chooseServer'><i class='material-icons'>add</i></button>Rendering Server:</h3>
+		  <div id="serviceLed" class='led off'></div> <span id='mainServer'></span> <span id="retry"></span>
+	  </div>
+	  <div id='serverPick'>
+		  <h3>Use Server <button id='closeServerPick'><i class='material-icons'>close</i></button></h3>
+		  <div>
+			  <input id='useIp' required  minlength="7" maxlength="15" size="15" placeholder="###.###.###.###" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"/>
+			  <input id='usePort' required minLength="2" maxlength="5" size="5" type="number" placeholder="#####"/><button id="connManual">Connect</button>
+		  </div>
+		  <h3>Auto Discovered:</h3>
+		  <div id="autoServer"></div>
+	  </div>	  
+	  
+	  
+	  <div id="rStat">
+		  <div id="Fra">
+			  Tiles: <b id="FraX"></b> of <b id="FraOf"></b><br/>
+			  Time: <b id="FraTime"></b> / Remaining <b id="FraRem"></b>
+		  </div>
+		  
+	  </div>
+	  
+	  
+	  <div id='jsConsole'>
+		  
+	  </div>
+
+	  <div id="conn">
+		  
+	  </div>
+<div id="git">Github</div>
+<div id="donate">Donate</div>
+
+	  
+
+<script src="js/client-cli.js"></script>    
+    
+    
+  </body>
+</html>
