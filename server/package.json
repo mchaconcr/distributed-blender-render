@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mchaconcnn/distributed-blender-render.git"
+    "url": "git+https://github.com/mchaconcr/distributed-blender-render.git"
   },
   "keywords": [
     "blender",
@@ -21,9 +21,9 @@
   "author": "Marco Chacón",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mchaconcnn/distributed-blender-render/issues"
+    "url": "https://github.com/mchaconcr/distributed-blender-render/issues"
   },
-  "homepage": "https://github.com/mchaconcnn/distributed-blender-render#readme",
+  "homepage": "https://github.com/mchaconcr/distributed-blender-render#readme",
   "devDependencies": {
     "electron": "^9.0.0",
     "electron-packager": "^14.2.1",
