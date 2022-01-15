@@ -36,7 +36,7 @@
     "http": "0.0.1-security",
     "jquery": "^3.5.1",
     "os": "^0.1.1",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "udp-discovery": "^2.0.0",
     "websocket": "^1.0.31"
   }
