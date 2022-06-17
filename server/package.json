@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/mchaconcr/distributed-blender-render#readme",
   "devDependencies": {
-    "electron": "^9.0.0",
+    "electron": "^15.5.5",
     "electron-packager": "^14.2.1",
     "electron-reload": "^1.5.0"
   },
